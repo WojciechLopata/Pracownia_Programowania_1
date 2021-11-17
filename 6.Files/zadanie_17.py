@@ -1,0 +1,6 @@
+file=open("Films.txt","r")
+copy=open("Copy.txt","w")
+a=file.read()
+copy.write(a)
+file.close()
+copy.close()
