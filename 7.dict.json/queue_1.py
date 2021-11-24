@@ -1,20 +1,19 @@
-queue=[]
+q=[]
 def display():
-    for i in range(len(queue)):
-        print(queue[-1-i],end="")
+    for i in q:
+       print(i,end=" ")
     print()
 def push(x):
-    queue.append(x)
+    q.append(x)
 def pop():
     reverse()
-    queue.remove()
+    del q[-1]
     reverse()
+# może być też del q[0]
 def reverse():
-    a=len(queue)
+    global q
     reversed=[]
-    for i in range(len(queue)):
-        
-    queue=reversed
-
-        
-    
+    a=len(q)
+    for i in range(a):
+        reversed.append(q[-1-i])
+    q=reversed
